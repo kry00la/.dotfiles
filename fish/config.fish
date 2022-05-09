@@ -44,8 +44,9 @@ alias mv='mv -i'
 alias rm='rm -i'
 
 # git
+alias addall='git add -N . && git add -p'
 alias addup='git add -p'
-alias addall='git add .'
+#alias addall='git add .'
 alias branch='git branch'
 alias checkout='git checkout'
 alias clone='git clone'
