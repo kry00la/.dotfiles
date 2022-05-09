@@ -1,0 +1,19 @@
+# This is Git's per-user configuration file.
+[user]
+# Please adapt and uncomment the following lines:
+	name = Leonardo Dapdap
+	email = leedapdap@gmail.com
+[core]
+	editor = nvim
+	excludesfile = ~/.gitignore
+[alias]
+    br = branch --format='%(HEAD) %(color:yellow)%(refname:short)%(color:reset) - %(contents:subject) %(color:green)(%(committerdate:relative)) [%(authorname)]' --sort=-committerdate
+    brutepush = push --force
+    bugfix = rebase -i HEAD~2
+    quickBugFix = !git commit -am "f" && git bugfix;
+    simple = log --graph --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(reset) - %C(bold green)(%ar)%C(reset) %C(white)%s%C(reset) %C(dim white)- %an%C(reset)%C(bold yellow)%d%C(reset)' --all
+    undo = reset HEAD~1
+[includeIf "gitdir:~/Workstation/"]
+	path = .gitconfig-lunatech 
+[pull]
+	rebase = true
