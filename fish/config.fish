@@ -43,24 +43,6 @@ alias cp="cp -i"
 alias mv='mv -i'
 alias rm='rm -i'
 
-# git
-alias addall='git add -N . && git add -p'
-alias addup='git add -p'
-#alias addall='git add .'
-alias branch='git branch'
-alias checkout='git checkout'
-alias clone='git clone'
-# moved to fish function
-#alias commit='git commit -m'
-alias fetch='git fetch'
-alias pull='git pull origin'
-#alias push='git push origin'
-alias tag='git tag'
-alias newtag='git tag -a'
-alias gs='git status'
-alias repo='open (git config --get remote.origin.url)'
-alias patchup='git add . && commit "f" && git rebase -i HEAD~2'
-
 if status is-interactive
 # Commands to run in interactive sessions can go here
 end
