@@ -10,7 +10,6 @@ starship init fish | source
 ## icons
 source ~/.local/share/icons-in-terminal/icons.fish
 
-
 ## fish
 
 alias sourceme='source ~/.config/fish/config.fish'
@@ -24,6 +23,8 @@ set TERM "xterm-256color"                         # Sets the terminal type
 
 alias vim='nvim'
 alias vi='nvim'
+alias v='vim'
+alias letsdovim='cd ~/.config/nvim && v'
 # navigation
 alias ..='cd ..'
 alias ...='cd ../..'
@@ -43,6 +44,13 @@ alias cp="cp -i"
 alias mv='mv -i'
 alias rm='rm -i'
 
+# 
+alias j='z '
+
+# bat
+
+alias cat='bat '
+
 if status is-interactive
 # Commands to run in interactive sessions can go here
 end
@@ -50,3 +58,5 @@ set -q GHCUP_INSTALL_BASE_PREFIX[1]; or set GHCUP_INSTALL_BASE_PREFIX $HOME ; se
 
 ## rust
 set PATH $HOME/.cargo/bin $PATH
+## python
+set -xg PYTHONPATH /path/to/test/folder $PYTHONPATH
