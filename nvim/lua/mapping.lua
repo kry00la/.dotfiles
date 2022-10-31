@@ -17,11 +17,22 @@ map("n", "<leader>p", "<cmd>lua vim.lsp.buf.signature_help()<CR>")
 map("n", "<leader>O", [[<cmd>lua require("metals").organize_imports()<CR>]])
 
 --tree
-map("n", "<leader>tt", "[[<cmd>NvimTreeToggle<CR>]]")
+map("n", "<leader>e", "[[<cmd>NvimTreeToggle<CR>]]")
 
 -- lazygit
 map("n", "<leader>gg","<cmd>LazyGit<CR>")
 
 -- custom
-
 keymap.set("i", "jk", "<ESC>") -- emulate escape with jk
+
+-- window management
+keymap.set("n", "<leader>sv", "<C-w>v") -- split window vertically
+keymap.set("n", "<leader>sh", "<C-w>s") -- split window horizontally
+keymap.set("n", "<leader>se", "<C-w>=") -- make split windows equal width & height
+keymap.set("n", "<leader>sx", ":close<CR>") -- close current split window
+
+-- clear search highlights
+keymap.set("n", "<leader>nh", ":nohl<CR>")
+
+-- vim-maximizer
+keymap.set("n", "<leader>sm", ":MaximizerToggle<CR>") 

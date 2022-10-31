@@ -22,6 +22,10 @@ return require("packer").startup(function()
 
   use("bluz71/vim-nightfly-guicolors")
 
+  use("szw/vim-maximizer") 
+
+  use("christoomey/vim-tmux-navigator")
+
 	use({
 		"nvim-telescope/telescope.nvim",
 		requires = { { "nvim-lua/popup.nvim" }, { "nvim-lua/plenary.nvim" } },
@@ -59,8 +63,6 @@ return require("packer").startup(function()
 		config = get_config("gitsigns"),
 		tag = "release",
 	})
-
---	use({ "feline-nvim/feline.nvim", config = get_config("feline") })
 
   use ({
   'kyazdani42/nvim-tree.lua',
