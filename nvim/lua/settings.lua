@@ -9,34 +9,34 @@ vim.o.smartindent = true
 vim.o.softtabstop = 2
 vim.o.tabstop = 2
 
--- Global options
-vim.o.background = "dark"
-vim.o.cursorline = true
-vim.o.errorbells = false
-vim.o.exrc = true
-vim.o.hidden = true
-vim.o.ignorecase = true
-vim.o.inccommand = "split"
-vim.o.incsearch = true
-vim.o.keywordprg = ":help"
-vim.o.laststatus = 2
-vim.o.lazyredraw = true
-vim.o.mouse = "n"
-vim.o.nrformats = ""
-vim.o.path = ".,,"
-vim.o.showmode = false
-vim.o.showtabline = 0
-vim.o.smartcase = true
-vim.o.splitbelow = true
-vim.o.splitright = true
-vim.o.swapfile = false
-vim.o.termguicolors = true
-vim.o.updatetime = 2000
-vim.o.wildignore = "*/node_modules/*,*/.git/*,DS_Store,*/venv/*,*/__pycache__/*,*.pyc,*/target"
-vim.o.wildmenu = true
-vim.o.wildmode = "full"
-vim.o.wildoptions = "pum"
-vim.opt.shortmess:append("c"):remove("F")
+-- -- Global options
+-- vim.o.background = "dark"
+-- vim.o.cursorline = true
+-- vim.o.errorbells = false
+-- vim.o.exrc = true
+-- vim.o.hidden = true
+-- vim.o.ignorecase = true
+-- vim.o.inccommand = "split"
+-- vim.o.incsearch = true
+-- vim.o.keywordprg = ":help"
+-- vim.o.laststatus = 2
+-- vim.o.lazyredraw = true
+-- vim.o.mouse = "n"
+-- vim.o.nrformats = ""
+-- vim.o.path = ".,,"
+-- vim.o.showmode = false
+-- vim.o.showtabline = 0
+-- vim.o.smartcase = true
+-- vim.o.splitbelow = true
+-- vim.o.splitright = true
+-- vim.o.swapfile = false
+-- vim.o.termguicolors = true
+-- vim.o.updatetime = 2000
+-- vim.o.wildignore = "*/node_modules/*,*/.git/*,DS_Store,*/venv/*,*/__pycache__/*,*.pyc,*/target"
+-- vim.o.wildmenu = true
+-- vim.o.wildmode = "full"
+-- vim.o.wildoptions = "pum"
+-- vim.opt.shortmess:append("c"):remove("F")
 
 -- Window-local options
 vim.o.breakindent = true

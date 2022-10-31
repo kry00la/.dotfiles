@@ -8,7 +8,7 @@ alias weather='curl wttr.in/rotterdam'
 starship init fish | source
 
 ## icons
-source ~/.local/share/icons-in-terminal/icons.fish
+#source ~/.local/share/icons-in-terminal/icons.fish
 
 ## fish
 
@@ -57,7 +57,7 @@ alias j='z '
 
 # bat
 
-alias cat='bat '
+alias cat='bat --theme=ansi'
 
 if status is-interactive
 # Commands to run in interactive sessions can go here

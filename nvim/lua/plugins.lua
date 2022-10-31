@@ -1,3 +1,16 @@
+-- auto install packer if not installed
+local ensure_packer = function()
+  local fn = vim.fn
+  local install_path = fn.stdpath('data')..'/site/pack/packer/start/packer.nvim'
+  if fn.empty(fn.glob(install_path)) > 0 then
+    fn.system({'git', 'clone', '--depth', '1', 'https://github.com/wbthomason/packer.nvim', install_path})
+    vim.cmd [[packadd packer.nvim]]
+    return true
+  end
+  return false
+end
+
+local packer_bootstrap = ensure_packer()
 -- returns the require for use in `config` parameter of packer's use
 -- expects the name of the config file
 local function get_config(name)
@@ -6,6 +19,8 @@ end
 
 return require("packer").startup(function()
 	use("wbthomason/packer.nvim")
+
+  use("bluz71/vim-nightfly-guicolors")
 
 	use({
 		"nvim-telescope/telescope.nvim",
@@ -38,14 +53,14 @@ return require("packer").startup(function()
 		},
 	})
 
-	use({ "Pocco81/AutoSave.nvim", config = get_config("autosave") })
+	-- use({ "Pocco81/AutoSave.nvim", config = get_config("autosave") })
 	use({
 		"lewis6991/gitsigns.nvim",
 		config = get_config("gitsigns"),
 		tag = "release",
 	})
 
-	use({ "feline-nvim/feline.nvim", config = get_config("feline") })
+--	use({ "feline-nvim/feline.nvim", config = get_config("feline") })
 
   use ({
   'kyazdani42/nvim-tree.lua',
@@ -63,4 +78,8 @@ use {
 
   use({ "tpope/vim-fugitive" })
 use({'kdheepak/lazygit.nvim'})
+
+	if packer_bootstrap then
+		require("packer").sync()
+	end
 end)

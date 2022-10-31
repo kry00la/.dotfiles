@@ -1,5 +1,5 @@
 local map = require("functions").map
-
+local keymap = vim.keymap
 -- telescope maps
 map("n", "<leader>ff", [[<cmd>lua require("telescope.builtin").find_files({layout_strategy="vertical"})<CR>]])
 map("n", "<leader>fg", [[<cmd>lua require("telescope.builtin").live_grep({layout_strategy="vertical"})<CR>]])
@@ -22,3 +22,6 @@ map("n", "<leader>tt", "[[<cmd>NvimTreeToggle<CR>]]")
 -- lazygit
 map("n", "<leader>gg","<cmd>LazyGit<CR>")
 
+-- custom
+
+keymap.set("i", "jk", "<ESC>") -- emulate escape with jk

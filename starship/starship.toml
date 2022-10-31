@@ -17,6 +17,7 @@ disabled = true
 
 [directory]
 style = "blue"
+disabled=true
 
 [character]
 success_symbol = "[❯](purple)"
