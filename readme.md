@@ -7,4 +7,6 @@ using stow
 e.g
 `stow --adopt -v -t ~/.config/nvim/ nvim/`
 
+# NOTES
 
+Use stow on dotfiles root directory
