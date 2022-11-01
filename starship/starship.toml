@@ -25,7 +25,7 @@ error_symbol = "[❯](red)"
 vicmd_symbol = "[❮](green)"
 
 [git_branch]
-format = "[$branch]($style)"
+format = "🌿 [$branch]($style) "
 
 [git_state]
 format = '\( [$state( $progress_current/$progress_total)]($style)\) '

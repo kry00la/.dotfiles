@@ -9,7 +9,11 @@ alias pull='git pull origin'
 alias tag='git tag'
 alias newtag='git tag -a'
 alias gs='git status'
-alias repo='open (git config --get remote.origin.url)'
+# poor man repo
+# alias repo='open (git config --get remote.origin.url)'
 alias lg='lazygit'
 alias gstash='git stash push -m'
 alias gtags='git tag -l | sort -V'
+
+# github cli 
+alias repo='gh repo view --web'
