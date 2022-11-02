@@ -90,8 +90,9 @@ return require("packer").startup(function()
 
 	use({ "kyazdani42/nvim-web-devicons" })
 
-  use("sts10/vim-pink-moon") 
+  -- use("sts10/vim-pink-moon")
 
+  use("junegunn/seoul256.vim") 
   ---------- UI -------------
 	
   if packer_bootstrap then
