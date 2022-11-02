@@ -20,8 +20,6 @@ end
 return require("packer").startup(function()
 	use("wbthomason/packer.nvim")
 
-  use("bluz71/vim-nightfly-guicolors")
-
   use("szw/vim-maximizer") 
 
   use("christoomey/vim-tmux-navigator")
@@ -31,8 +29,6 @@ return require("packer").startup(function()
 		requires = { { "nvim-lua/popup.nvim" }, { "nvim-lua/plenary.nvim" } },
 		config = get_config("telescope"),
 	})
-
-	use({ "kyazdani42/nvim-web-devicons" })
 
 	use({
 		"nvim-treesitter/nvim-treesitter",
@@ -70,16 +66,27 @@ return require("packer").startup(function()
     'kyazdani42/nvim-web-devicons', -- optional, for file icons
   },
   config = get_config("nvim-tree")
-})
+  })
 
-use {
-  "startup-nvim/startup.nvim",
-  requires = {"nvim-telescope/telescope.nvim", "nvim-lua/plenary.nvim"},
-  config = get_config("startup-nvim")
-}
+  use {
+    "startup-nvim/startup.nvim",
+    requires = {"nvim-telescope/telescope.nvim", "nvim-lua/plenary.nvim"},
+    config = get_config("startup-nvim")
+  }
 
   use({ "tpope/vim-fugitive" })
-use({'kdheepak/lazygit.nvim'})
+
+  use({'kdheepak/lazygit.nvim'})
+
+  use {
+    'nvim-lualine/lualine.nvim',
+    requires = { 'kyazdani42/nvim-web-devicons', opt = true },
+    config = get_config("lualine")
+  }
+
+  use("bluz71/vim-nightfly-guicolors")
+
+	use({ "kyazdani42/nvim-web-devicons" })
 
 	if packer_bootstrap then
 		require("packer").sync()
