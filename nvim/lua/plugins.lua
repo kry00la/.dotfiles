@@ -78,6 +78,8 @@ return require("packer").startup(function()
 
   use({'kdheepak/lazygit.nvim'})
 
+  ---------- UI -------------
+  
   use {
     'nvim-lualine/lualine.nvim',
     requires = { 'kyazdani42/nvim-web-devicons', opt = true },
@@ -88,7 +90,11 @@ return require("packer").startup(function()
 
 	use({ "kyazdani42/nvim-web-devicons" })
 
-	if packer_bootstrap then
+  use("chriskempson/base16-vim") 
+
+  ---------- UI -------------
+	
+  if packer_bootstrap then
 		require("packer").sync()
 	end
 end)
