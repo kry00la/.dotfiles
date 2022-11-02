@@ -90,7 +90,7 @@ return require("packer").startup(function()
 
 	use({ "kyazdani42/nvim-web-devicons" })
 
-  use("chriskempson/base16-vim") 
+  use("sts10/vim-pink-moon") 
 
   ---------- UI -------------
 	
