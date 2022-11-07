@@ -1,13 +1,13 @@
 -- auto install packer if not installed
 local ensure_packer = function()
-  local fn = vim.fn
-  local install_path = fn.stdpath('data')..'/site/pack/packer/start/packer.nvim'
-  if fn.empty(fn.glob(install_path)) > 0 then
-    fn.system({'git', 'clone', '--depth', '1', 'https://github.com/wbthomason/packer.nvim', install_path})
-    vim.cmd [[packadd packer.nvim]]
-    return true
-  end
-  return false
+	local fn = vim.fn
+	local install_path = fn.stdpath("data") .. "/site/pack/packer/start/packer.nvim"
+	if fn.empty(fn.glob(install_path)) > 0 then
+		fn.system({ "git", "clone", "--depth", "1", "https://github.com/wbthomason/packer.nvim", install_path })
+		vim.cmd([[packadd packer.nvim]])
+		return true
+	end
+	return false
 end
 
 local packer_bootstrap = ensure_packer()
@@ -20,9 +20,9 @@ end
 return require("packer").startup(function()
 	use("wbthomason/packer.nvim")
 
-  use("szw/vim-maximizer") 
+	use("szw/vim-maximizer")
 
-  use("christoomey/vim-tmux-navigator")
+	use("christoomey/vim-tmux-navigator")
 
 	use({
 		"nvim-telescope/telescope.nvim",
@@ -35,23 +35,13 @@ return require("packer").startup(function()
 		run = ":TSUpdate",
 	})
 
-	use({
-		"hrsh7th/nvim-cmp",
-		requires = {
-			{ "hrsh7th/cmp-nvim-lsp" },
-			{ "hrsh7th/cmp-vsnip" },
-			{ "hrsh7th/vim-vsnip" },
-		},
-		config = get_config("cmp"),
-	})
-
-	use({
-		"scalameta/nvim-metals",
-		requires = {
-			"nvim-lua/plenary.nvim",
-			"mfussenegger/nvim-dap",
-		},
-	})
+	--	use({
+	--		"scalameta/nvim-metals",
+	--		requires = {
+	--			"nvim-lua/plenary.nvim",
+	--			"mfussenegger/nvim-dap",
+	--		},
+	--	})
 
 	-- use({ "Pocco81/AutoSave.nvim", config = get_config("autosave") })
 	use({
@@ -60,46 +50,60 @@ return require("packer").startup(function()
 		tag = "release",
 	})
 
-  use ({
-  'kyazdani42/nvim-tree.lua',
-  requires = {
-    'kyazdani42/nvim-web-devicons', -- optional, for file icons
-  },
-  config = get_config("nvim-tree")
-  })
+	use({
+		"kyazdani42/nvim-tree.lua",
+		requires = {
+			"kyazdani42/nvim-web-devicons", -- optional, for file icons
+		},
+		config = get_config("nvim-tree"),
+	})
 
-  use {
-    "startup-nvim/startup.nvim",
-    requires = {"nvim-telescope/telescope.nvim", "nvim-lua/plenary.nvim"},
-    config = get_config("startup-nvim")
-  }
+	use({
+		"startup-nvim/startup.nvim",
+		requires = { "nvim-telescope/telescope.nvim", "nvim-lua/plenary.nvim" },
+		config = get_config("startup-nvim"),
+	})
 
-  --------- GIT --------------
+	--------- GIT --------------
 
-  use({ "tpope/vim-fugitive" })
+	use({ "tpope/vim-fugitive" })
 
-  use({'kdheepak/lazygit.nvim'})
+	use({ "kdheepak/lazygit.nvim" })
 
-  --------- GIT --------------
+	--------- GIT --------------
 
-  ---------- UI -------------
-  
-  use {
-    'nvim-lualine/lualine.nvim',
-    requires = { 'kyazdani42/nvim-web-devicons', opt = true },
-    config = get_config("lualine")
-  }
+	---------- UI -------------
 
-  use("bluz71/vim-nightfly-guicolors")
+	use({
+		"nvim-lualine/lualine.nvim",
+		requires = { "kyazdani42/nvim-web-devicons", opt = true },
+		config = get_config("lualine"),
+	})
+
+	use("bluz71/vim-nightfly-guicolors")
 
 	use({ "kyazdani42/nvim-web-devicons" })
 
-  -- use("sts10/vim-pink-moon")
+	use("junegunn/seoul256.vim")
+	---------- UI -------------
 
-  use("junegunn/seoul256.vim") 
-  ---------- UI -------------
-	
-  if packer_bootstrap then
+	-- autocompletion
+
+	use({
+		"hrsh7th/nvim-cmp",
+		requires = {
+			{ "hrsh7th/cmp-buffer" },
+			{ "hrsh7th/cmp-path" },
+		},
+		config = get_config("nvim-cmp"),
+	})
+
+	-- snippets
+	use("L3MON4D3/LuaSnip") -- snippet engine
+	use("saadparwaiz1/cmp_luasnip") -- for autocompletion
+	use("rafamadriz/friendly-snippets") -- useful snippets
+
+	if packer_bootstrap then
 		require("packer").sync()
 	end
 end)

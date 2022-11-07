@@ -8,7 +8,7 @@
 -- vim.o.smartindent = true
 -- vim.o.softtabstop = 2
 -- vim.o.tabstop = 2
--- 
+--
 -- -- -- Global options
 -- -- vim.o.background = "dark"
 -- -- vim.o.cursorline = true
@@ -37,7 +37,7 @@
 -- -- vim.o.wildmode = "full"
 -- -- vim.o.wildoptions = "pum"
 -- -- vim.opt.shortmess:append("c"):remove("F")
--- 
+--
 -- -- Window-local options
 -- vim.o.breakindent = true
 -- vim.o.foldmethod = "marker"
@@ -46,7 +46,7 @@ vim.o.relativenumber = true
 vim.o.number = true
 -- vim.o.signcolumn = "yes" -- make sure this is on for gitsigns.nvim, otherwise the signcolumn changes size constantly
 -- vim.o.wrap = true
--- 
+--
 -- -- Autocmds
 -- -- highlight yank for a brief second for visual feedback
 -- vim.api.nvim_create_autocmd("TextYankPost", {
@@ -55,7 +55,7 @@ vim.o.number = true
 -- 		vim.highlight.on_yank({ on_visual = false })
 -- 	end,
 -- })
--- 
+--
 -- -- disable builtin plugins i don't need
 -- vim.g.loaded_gzip = 1
 -- vim.g.loaded_zip = 1

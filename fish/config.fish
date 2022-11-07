@@ -45,7 +45,7 @@ alias ls='lsd'
 alias l='ls -l'
 alias la='ls -a'
 alias ll='ls -la'
-alias lt='ls --tree'
+alias tree='ls --tree'
 
 # confirm before overwriting something
 alias cp="cp -i"
@@ -66,5 +66,6 @@ set -q GHCUP_INSTALL_BASE_PREFIX[1]; or set GHCUP_INSTALL_BASE_PREFIX $HOME ; se
 
 ## rust
 set PATH $HOME/.cargo/bin $PATH
+
 ## python
 set -xg PYTHONPATH /path/to/test/folder $PYTHONPATH

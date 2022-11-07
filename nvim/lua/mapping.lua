@@ -20,7 +20,7 @@ map("n", "<leader>O", [[<cmd>lua require("metals").organize_imports()<CR>]])
 map("n", "<leader>e", "[[<cmd>NvimTreeToggle<CR>]]")
 
 -- lazygit
-map("n", "<leader>gg","<cmd>LazyGit<CR>")
+map("n", "<leader>gg", "<cmd>LazyGit<CR>")
 
 -- custom
 keymap.set("i", "jk", "<ESC>") -- emulate escape with jk
@@ -35,4 +35,4 @@ keymap.set("n", "<leader>sx", ":close<CR>") -- close current split window
 keymap.set("n", "<leader>nh", ":nohl<CR>")
 
 -- vim-maximizer
-keymap.set("n", "<leader>sm", ":MaximizerToggle<CR>") 
+keymap.set("n", "<leader>sm", ":MaximizerToggle<CR>")
