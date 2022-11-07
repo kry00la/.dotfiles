@@ -74,9 +74,13 @@ return require("packer").startup(function()
     config = get_config("startup-nvim")
   }
 
+  --------- GIT --------------
+
   use({ "tpope/vim-fugitive" })
 
   use({'kdheepak/lazygit.nvim'})
+
+  --------- GIT --------------
 
   ---------- UI -------------
   
