@@ -11,7 +11,7 @@
 --
 -- -- -- Global options
 -- -- vim.o.background = "dark"
--- -- vim.o.cursorline = true
+vim.o.cursorline = true
 -- -- vim.o.errorbells = false
 -- -- vim.o.exrc = true
 -- -- vim.o.hidden = true
@@ -32,7 +32,7 @@
 -- -- vim.o.swapfile = false
 -- -- vim.o.termguicolors = true
 -- -- vim.o.updatetime = 2000
--- -- vim.o.wildignore = "*/node_modules/*,*/.git/*,DS_Store,*/venv/*,*/__pycache__/*,*.pyc,*/target"
+vim.o.wildignore = "*/node_modules/*,*/.git/*,DS_Store,*/venv/*,*/__pycache__/*,*.pyc,*/target"
 -- -- vim.o.wildmenu = true
 -- -- vim.o.wildmode = "full"
 -- -- vim.o.wildoptions = "pum"
@@ -46,16 +46,16 @@ vim.o.relativenumber = true
 vim.o.number = true
 -- vim.o.signcolumn = "yes" -- make sure this is on for gitsigns.nvim, otherwise the signcolumn changes size constantly
 -- vim.o.wrap = true
---
+
 -- -- Autocmds
 -- -- highlight yank for a brief second for visual feedback
--- vim.api.nvim_create_autocmd("TextYankPost", {
--- 	pattern = "*",
--- 	callback = function()
--- 		vim.highlight.on_yank({ on_visual = false })
--- 	end,
--- })
---
+vim.api.nvim_create_autocmd("TextYankPost", {
+	pattern = "*",
+	callback = function()
+		vim.highlight.on_yank({ on_visual = false })
+	end,
+})
+
 -- -- disable builtin plugins i don't need
 -- vim.g.loaded_gzip = 1
 -- vim.g.loaded_zip = 1
