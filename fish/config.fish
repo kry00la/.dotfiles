@@ -16,7 +16,7 @@ alias sourceme='source ~/.config/fish/config.fish'
 alias editme='vim ~/.config/fish/config.fish'
 
 ### EXPORT ###
-
+set TERM "xterm-256color"
 ##
 
 alias vim='nvim'
