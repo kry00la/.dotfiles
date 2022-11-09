@@ -16,8 +16,6 @@ alias sourceme='source ~/.config/fish/config.fish'
 alias editme='vim ~/.config/fish/config.fish'
 
 ### EXPORT ###
-set fish_greeting                                 # Supresses fish's intro message
-set TERM "xterm-256color"                         # Sets the terminal type
 
 ##
 

@@ -101,7 +101,7 @@ return require("packer").startup(function()
 	-- snippets
 	use("saadparwaiz1/cmp_luasnip") -- for autocompletion
 	use("rafamadriz/friendly-snippets") -- useful snippets
-	use({ "L3MON4D3/LuaSnip", after = "nvim-cmp", config = get_config("snippets") })
+	use({ "L3MON4D3/LuaSnip", config = get_config("snippets") })
 	if packer_bootstrap then
 		require("packer").sync()
 	end
