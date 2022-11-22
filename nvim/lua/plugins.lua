@@ -83,6 +83,9 @@ return require("packer").startup(function()
 	use({ "kyazdani42/nvim-web-devicons" })
 
 	use("junegunn/seoul256.vim")
+
+	use({ "kevinhwang91/nvim-bqf" })
+
 	---------- UI -------------
 
 	-- autocompletion
