@@ -35,14 +35,12 @@ return require("packer").startup(function()
 		run = ":TSUpdate",
 	})
 
-	--	use({
-	--		"scalameta/nvim-metals",
-	--		requires = {
-	--			"nvim-lua/plenary.nvim",
-	--			"mfussenegger/nvim-dap",
-	--		},
-	--	})
+	---- SCALA ----
+	use("nvim-lua/plenary.nvim")
+	use({ "neovim/nvim-lspconfig" })
 
+	use({ "scalameta/nvim-metals", requires = { "nvim-lua/plenary.nvim", "mfussenegger/nvim-dap" } })
+	---- SCALA ----
 	-- use({ "Pocco81/AutoSave.nvim", config = get_config("autosave") })
 	use({
 		"lewis6991/gitsigns.nvim",
@@ -94,6 +92,8 @@ return require("packer").startup(function()
 		requires = {
 			{ "hrsh7th/cmp-buffer" },
 			{ "hrsh7th/cmp-path" },
+			{ "hrsh7th/cmp-nvim-lsp-signature-help" },
+			{ "hrsh7th/cmp-nvim-lsp" },
 		},
 		config = get_config("nvim-cmp"),
 	})

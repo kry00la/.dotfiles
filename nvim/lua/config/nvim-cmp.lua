@@ -7,13 +7,13 @@ end
 
 -- import luasnip plugin safely
 local luasnip_status, luasnip = pcall(require, "luasnip")
-  if not luasnip_status then
-  print("luasnip not found!")
-  return
+if not luasnip_status then
+	print("luasnip not found!")
+	return
 end
 
 -- load vs-code like snippets from plugins (e.g. friendly-snippets)
- require("luasnip/loaders/from_vscode").lazy_load()
+require("luasnip/loaders/from_vscode").lazy_load()
 vim.opt.completeopt = "menu,menuone,noselect"
 
 cmp.setup({
@@ -62,5 +62,7 @@ cmp.setup({
 		{ name = "buffer" }, -- text within current buffer
 		{ name = "path" }, -- file system paths
 		{ name = "vsnip" },
+		{ name = "nvim_lsp_signature_help" },
+		{ name = "nvim_lsp", priority = 10 },
 	}),
 })

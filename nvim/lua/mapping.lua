@@ -8,11 +8,11 @@ map("n", "<leader>mc", [[<cmd>lua require("telescope").extensions.metals.command
 
 -- lsp maps
 map("n", "K", "<cmd>lua vim.lsp.buf.hover()<CR>")
-map("n", "<leader>b", "<cmd>lua vim.lsp.buf.definition()<CR>")
+map("n", "gd", "<cmd>lua vim.lsp.buf.definition()<CR>")
 map("n", "<leader>>", "<cmd>lua vim.lsp.buf.code_action()<CR>")
 map("n", "<leader>L", "<cmd>lua vim.lsp.buf.formatting()<CR>")
 map("n", "<leader>p", "<cmd>lua vim.lsp.buf.signature_help()<CR>")
-
+map("n", "rf", "<cmd>lua vim.lsp.buf.references()<CR>")
 -- metals
 map("n", "<leader>O", [[<cmd>lua require("metals").organize_imports()<CR>]])
 
