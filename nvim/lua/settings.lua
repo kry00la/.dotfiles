@@ -10,3 +10,5 @@ vim.api.nvim_create_autocmd("TextYankPost", {
 		vim.highlight.on_yank({ on_visual = false })
 	end,
 })
+
+vim.opt.clipboard = 'unnamedplus'
