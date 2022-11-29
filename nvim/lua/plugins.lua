@@ -86,6 +86,8 @@ return require("packer").startup(function()
 
 	use({ "kevinhwang91/nvim-bqf" })
 
+	use("eandrju/cellular-automaton.nvim")
+
 	---------- UI -------------
 
 	-- autocompletion
