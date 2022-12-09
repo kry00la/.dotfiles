@@ -39,3 +39,6 @@ keymap.set("n", "<leader>sm", ":MaximizerToggle<CR>")
 
 -- celluar-automation
 vim.keymap.set("n", "<leader>fml", "<cmd>CellularAutomaton make_it_rain<CR>")
+
+-- LazyGit
+vim.keymap.set("n", "<leader>lg", "<cmd>LazyGit<CR>")
