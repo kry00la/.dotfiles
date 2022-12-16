@@ -62,3 +62,6 @@ set PATH $HOME/.cargo/bin $PATH
 
 ## python
 ## set -xg PYTHONPATH /path/to/test/folder $PYTHONPATH
+
+test -e {$HOME}/.iterm2_shell_integration.fish ; and source {$HOME}/.iterm2_shell_integration.fish
+
