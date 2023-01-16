@@ -1,7 +1,7 @@
 export VISUAL=vim
 export EDITOR="$VISUAL"
 ## weather
-alias weather='curl wttr.in/rotterdam'
+alias weather='curl wttr.in/den_haag'
 
 ## STARSHIP  ##
 
@@ -59,7 +59,9 @@ set -q GHCUP_INSTALL_BASE_PREFIX[1]; or set GHCUP_INSTALL_BASE_PREFIX $HOME ; se
 
 ## rust
 set PATH $HOME/.cargo/bin $PATH
-
+set PATH $HOME/opt/homebrew/bin $PATH
+set PATH $HOME/opt/homebrew/sbin $PATH
+set PATH $HOME/opt/homebrew/thrift $PATH
 ## python
 ## set -xg PYTHONPATH /path/to/test/folder $PYTHONPATH
 
