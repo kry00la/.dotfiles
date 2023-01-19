@@ -7,9 +7,9 @@ function jira
 
  set -l branchName (git branch --show-current)
  ## extract after prefix
- string match -r '(?<nonSlash>[^\/]+$)' $branchName
+ string match -rq '(?<nonSlash>[^\/]+$)' $branchName
  ## extract before description
- string match -r '(?<ticketNumber>^[^__]+)' $nonSlash
+ string match -rq '(?<ticketNumber>^[^__]+)' $nonSlash
  
  ## WORK_JIRA_URL should be available in conf.d or env of fish 
  set -l url "$WORK_JIRA_URL/browse/$ticketNumber"
