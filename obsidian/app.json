@@ -1,0 +1,13 @@
+{
+  "strictLineBreaks": false,
+  "foldHeading": true,
+  "showLineNumber": true,
+  "spellcheck": true,
+  "vimMode": true,
+  "showInlineTitle": true,
+  "trashOption": "local",
+  "alwaysUpdateLinks": true,
+  "newFileLocation": "folder",
+  "newFileFolderPath": "task",
+  "attachmentFolderPath": "./assets"
+}

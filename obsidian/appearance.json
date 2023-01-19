@@ -1,0 +1,10 @@
+{
+  "accentColor": "",
+  "cssTheme": "Sanctum",
+  "translucency": false,
+  "showViewHeader": true,
+  "enabledCssSnippets": [
+    "side-dock-actions"
+  ],
+  "theme": "moonstone"
+}
