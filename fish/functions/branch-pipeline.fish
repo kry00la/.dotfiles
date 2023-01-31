@@ -1,4 +1,4 @@
-function branch-pipeline --description extract task number from branch name
+function branch-pipeline 
   # param: git branch name
 
   ################################################################
