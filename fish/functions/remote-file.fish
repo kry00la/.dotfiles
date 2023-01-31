@@ -1,5 +1,5 @@
-function remote-file --d open a file base from remote url
-   if test -n "$argv[1]"
+function remote-file 
+   if test -d ./.git
      set -l remote (git remote show origin | grep Fetch.URL)
      set -l branch (git branch --show-current)
 
@@ -12,9 +12,13 @@ function remote-file --d open a file base from remote url
      string match -rq '(?<removedPrefix>[^@]*$)' $remote-url #removed (1) from the example above
      string match -rq '(?<removedSuffix>.*(?=.git))' $removedPrefix #removed (3) from the example above
      set -l replacedColonWithSlashes (string replace -a ':' '/' $removedSuffix) # replace all ':' -> '/' from the example above
+    
+     # using alias pf (fzf)
+     set -l fileName (pf)
 
-     open "https://$replacedColonWithSlashes/blob/$branch/$argv[1]"
+     open "https://$replacedColonWithSlashes/blob/$branch/$fileName"
+
    else
-     echo "please input an argument"
+     echo "Not a valid git repo/directory"
    end
 end
