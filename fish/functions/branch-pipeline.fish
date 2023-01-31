@@ -1,4 +1,4 @@
-function branch-pipeline --description extract-jira-ticket
+function branch-pipeline --description extract task number from branch name
   # param: git branch name
 
   ################################################################

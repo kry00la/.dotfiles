@@ -1,8 +1,7 @@
 function jira
 
  ################################################################
- ## with this function, git branch naming convenstion would be ##
- ## <prefix>/<ticket-number{4 digit value+}__<description>     ##
+ ##      open jira issue based from git branch ticket name     ##
  ################################################################
 
  set -l branchName (git branch --show-current)
