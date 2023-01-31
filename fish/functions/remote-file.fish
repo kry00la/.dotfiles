@@ -1,5 +1,6 @@
 function remote-file 
-   if test -d ./.git
+   set -l maybeGit (git rev-parse --is-inside-work-tree)
+   if contains true $maybeGit
      set -l remote (git remote show origin | grep Fetch.URL)
      set -l branch (git branch --show-current)
 
