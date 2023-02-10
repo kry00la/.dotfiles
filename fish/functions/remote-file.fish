@@ -16,8 +16,9 @@ function remote-file
     
      # using alias pf (fzf)
      set -l fileName (pf)
-
-     open "https://$replacedColonWithSlashes/blob/$branch/$fileName"
+     if test -n "$fileName"
+       open "https://$replacedColonWithSlashes/blob/$branch/$fileName"
+     end
 
    else
      echo "Not a valid git repo/directory"
