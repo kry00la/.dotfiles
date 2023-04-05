@@ -3,4 +3,4 @@ require("colorscheme")
 require("plugins")
 require("mapping")
 require("lsp")
--- require("diagnostic").setup()
+
