@@ -1,0 +1,60 @@
+shell:
+  program: /opt/homebrew/bin/fish
+  args:
+    - -l
+    - -c
+    - "tmux attach -t krayola⚡️ || tmux new -s krayola⚡️"
+
+font:
+  size: 17
+  normal:
+    family: "Hack Nerd Font"
+window:
+  padding:
+    x: 5
+    y: 5
+  dimensions:
+    columns: 120
+    lines: 40
+  opacity: 0.98
+  decorations: buttonless
+
+env:
+  TERM: xterm-256color
+
+colors:
+  # Default colors
+  primary:
+    background: '0x414141'
+    foreground: '0xfffefe'
+
+  # Cursor colors
+  cursor:
+    text:   '0xfffefe'
+    cursor: '0xdddddd'
+
+  # Normal colors
+  normal:
+    black:   '0x444444'
+    red:     '0xdc6864'
+    green:   '0xb3ca73'
+    yellow:  '0xffcf7f'
+    blue:    '0x7da9c7'
+    magenta: '0xdaaae0'
+    cyan:    '0xc9deff'
+    white:   '0xf1f1ef'
+
+  # Bright colors
+  bright:
+    black:   '0x656565'
+    red:     '0xf52808'
+    green:   '0xcce387'
+    yellow:  '0xe6e79c'
+    blue:    '0x9ac4e0'
+    magenta: '0xffe0e0'
+    cyan:    '0xe2f6ff'
+    white:   '0xfffefe'
+
+key_bindings:
+  - { key: Q,      mods: Command,            action: None             }
+  - { key: W,      mods: Command,            action: None             }  

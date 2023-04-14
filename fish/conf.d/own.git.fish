@@ -8,6 +8,7 @@ alias pull='git pull origin'
 alias tag='git tag'
 alias newtag='git tag -a'
 alias gs='git status'
+alias myhash='git rev-parse HEAD | pbcopy'
 # poor man repo
 # alias repo='open (git config --get remote.origin.url)'
 alias lg='lazygit'
