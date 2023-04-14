@@ -33,9 +33,9 @@ style = "bright-black"
 
 [git_status]
 conflicted = "🏳 "
-ahead = "⬆️ "
-behind = "⬇️ "
-diverged = "↕️ " 
+ahead = "⏫"
+behind = "⏬"
+diverged = "⏺️" 
 stashed = "📦"
 modified = "📝"
 staged = '[ ++\($count\)](green)'
