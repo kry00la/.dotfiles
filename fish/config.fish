@@ -2,6 +2,7 @@ export VISUAL=vim
 export EDITOR="$VISUAL"
 ## STARSHIP  ##
 
+
 starship init fish | source
 
 ## icons
@@ -48,6 +49,9 @@ alias j='z '
 # bat
 
 alias cat='bat --theme=ansi'
+# location
+
+set -g -x WMI Den_haag
 
 if status is-interactive
 # Commands to run in interactive sessions can go here
