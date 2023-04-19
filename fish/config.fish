@@ -1,8 +1,5 @@
 export VISUAL=vim
 export EDITOR="$VISUAL"
-## weather
-alias weather='curl wttr.in/den_haag'
-
 ## STARSHIP  ##
 
 starship init fish | source
