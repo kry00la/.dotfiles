@@ -4,8 +4,6 @@
 
 local metals_config = require("metals").bare_config()
 
-local me = 1
-
 -- Example of settings
 metals_config.settings = {
 	showImplicitArguments = true,
@@ -17,7 +15,7 @@ metals_config.settings = {
 -- you *have* to have a setting to display this in your statusline or else
 -- you'll not see any messages from metals. There is more info in the help
 -- docs about this
--- metals_config.init_options.statusBarProvider = "on"
+metals_config.init_options.statusBarProvider = "on"
 
 -- Example if you are using cmp how to make sure the correct capabilities for snippets are set
 local capabilities = vim.lsp.protocol.make_client_capabilities()
