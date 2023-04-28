@@ -4,6 +4,8 @@
 
 local metals_config = require("metals").bare_config()
 
+local me = 1
+
 -- Example of settings
 metals_config.settings = {
 	showImplicitArguments = true,
