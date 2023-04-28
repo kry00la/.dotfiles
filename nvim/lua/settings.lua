@@ -12,4 +12,4 @@ vim.api.nvim_create_autocmd("TextYankPost", {
 })
 
 vim.opt.clipboard = "unnamedplus"
-vim.g.mapleader = ' '
+vim.g.mapleader = " "

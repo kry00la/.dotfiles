@@ -22,7 +22,13 @@ return require("packer").startup(function()
 
 	use("szw/vim-maximizer")
 
+	-- APP INTEGRATION --
 	use("christoomey/vim-tmux-navigator")
+	-- APP INTEGRATION --
+
+	-- FORMATTER --
+	use({ "ckipp01/stylua-nvim", run = "cargo install stylua" })
+	-- FORMATTER --
 
 	use({
 		"nvim-telescope/telescope.nvim",
@@ -35,13 +41,22 @@ return require("packer").startup(function()
 		run = ":TSUpdate",
 	})
 
+	use({
+		"williamboman/mason.nvim",
+		run = ":MasonUpdate", -- :MasonUpdate updates registry contents
+		config = get_config("mason"),
+	})
+
+	----- LSP -----
+	use("williamboman/mason-lspconfig.nvim")
+	use({ "neovim/nvim-lspconfig" })
+	----- LSP -----
+
 	---- SCALA ----
 	use("nvim-lua/plenary.nvim")
-	use({ "neovim/nvim-lspconfig" })
-
 	use({ "scalameta/nvim-metals", requires = { "nvim-lua/plenary.nvim", "mfussenegger/nvim-dap" } })
 	---- SCALA ----
-	-- use({ "Pocco81/AutoSave.nvim", config = get_config("autosave") })
+
 	use({
 		"lewis6991/gitsigns.nvim",
 		config = get_config("gitsigns"),
