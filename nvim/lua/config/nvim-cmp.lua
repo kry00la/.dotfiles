@@ -19,7 +19,6 @@ vim.opt.completeopt = "menu,menuone,noselect"
 cmp.setup({
 	snippet = {
 		expand = function(args)
-			local luasnip = prequire("luasnip")
 			if not luasnip then
 				print("LuaSnip missing")
 				return

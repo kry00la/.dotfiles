@@ -17,7 +17,7 @@ local function get_config(name)
 	return string.format('require("config/%s")', name)
 end
 
-return require("packer").startup(function()
+return require("packer").startup(function(use)
 	use("wbthomason/packer.nvim")
 
 	use("szw/vim-maximizer")
