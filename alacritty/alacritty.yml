@@ -6,7 +6,7 @@ shell:
     - "tmux attach -t krayola⚡️ || tmux new -s krayola⚡️"
 
 font:
-  size: 14
+  size: 15
   normal:
     family: "Hack Nerd Font"
 window:
