@@ -32,7 +32,7 @@ return require("packer").startup(function(use)
 
 	use({
 		"nvim-telescope/telescope.nvim",
-		requires = { { "nvim-lua/popup.nvim" }, { "nvim-lua/plenary.nvim" } },
+		requires = { { "nvim-lua/popup.nvim" }, { "nvim-lua/plenary.nvim" } , {"smartpde/telescope-recent-files"}},
 		config = get_config("telescope"),
 	})
 
