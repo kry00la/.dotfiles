@@ -8,8 +8,8 @@ map("n", "<leader>fo", [[<cmd>lua require('telescope').extensions.recent_files.p
 -- lsp maps
 map("n", "K", "<cmd>lua vim.lsp.buf.hover()<CR>")
 map("n", "gd", "<cmd>lua vim.lsp.buf.definition()<CR>") -- GO-TO
-map("n", "<leader>>", "<cmd>lua vim.lsp.buf.code_action()<CR>")
-map("n", "<leader>L", "<cmd>lua vim.lsp.buf.formatting()<CR>")
+map("n", "<leader>ca", "<cmd>lua vim.lsp.buf.code_action()<CR>")
+map("n", "<leader>o", "<cmd>lua vim.lsp.buf.formatting()<CR>")
 map("n", "<leader>p", "<cmd>lua vim.lsp.buf.signature_help()<CR>")
 map("n", "rf", "<cmd>lua vim.lsp.buf.references()<CR>")
 -- metals
@@ -17,6 +17,8 @@ map("n", "<leader>O", [[<cmd>lua require("metals").organize_imports()<CR>]])
 map("n", "<leader>mc", [[<cmd>lua require("telescope").extensions.metals.commands()<CR>]])
 map("n", "<leader>l", [[<cmd>lua vim.diagnostic.setqflist()<CR>]])
 map("n", "<leader>r", [[<cmd>lua vim.lsp.buf.rename()<CR>]])
+map("n", "<leader>cl", [[<cmd>lua vim.lsp.codelens.run()<CR>]])
+map("n", "<leader>dr", [[<cmd>lua require("dap").repl.toggle()<CR>]])
 
 --tree
 map("n", "<leader>e", "[[<cmd>NvimTreeToggle<CR>]]")
