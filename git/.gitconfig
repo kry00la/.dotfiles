@@ -17,6 +17,7 @@
   tree = log --graph --decorate --pretty=oneline --abbrev-commit
   dot = checkout master
   empty =  commit -a --allow-empty-message -m ''
+  fast-f-time=commit --amend --no-edit --date=now 
 [includeIf "gitdir:~/Workstation/"]
 	path = ~/Workstation/.gitconfig-work
 [pull]
